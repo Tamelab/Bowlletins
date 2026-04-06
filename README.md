@@ -1,2 +1,2 @@
 ## Home Page
-https://tamelab.github.io/Bow-lettins.github.io/
+https://bow-lletins.github.io/bowlletins.github.io/
