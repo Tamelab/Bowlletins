@@ -777,6 +777,7 @@ body {
     width: 145px;
     height: 145px;
   }
+<<<<<<< Updated upstream
   /* SIGNUP PAGE */
 .signup-page {
   min-height: 100vh;
@@ -856,10 +857,62 @@ body {
 }
 
 .signup-page-input:focus {
+=======
+  /* SPLIT SIGNUP PAGE */
+.signup-split-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f4efe6;
+}
+
+.signup-split-left {
+  background: #f8f4ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.signup-split-content {
+  width: 100%;
+  max-width: 420px;
+}
+
+.signup-eyebrow {
+  color: #5b5b5b;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.signup-split-title {
+  color: #1f2a37;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 36px;
+}
+
+.signup-split-form {
+  margin-bottom: 32px;
+}
+
+.signup-split-input {
+  height: 64px;
+  border-radius: 10px;
+  border: 1px solid #d8d4ca;
+  background-color: #fcfbf8;
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+
+.signup-split-input:focus {
+>>>>>>> Stashed changes
   border-color: #024731;
   box-shadow: 0 0 0 0.15rem rgba(2, 71, 49, 0.15);
 }
 
+<<<<<<< Updated upstream
 .signup-page-btn {
   background-color: #0c4b37 !important;
   border: none !important;
@@ -880,15 +933,43 @@ body {
 
 .signup-page-link {
   color: #0c4b37;
+=======
+.signup-split-btn {
+  height: 64px;
+  border: none !important;
+  border-radius: 10px;
+  background-color: #024731 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.signup-split-btn:hover {
+  background-color: #17634b !important;
+}
+
+.signup-split-login-text {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.signup-split-link {
+  color: #024731;
+>>>>>>> Stashed changes
   font-weight: 700;
   text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 .signup-page-link:hover {
+=======
+.signup-split-link:hover {
+>>>>>>> Stashed changes
   color: #17634b;
   text-decoration: underline;
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 768px) {
   .signup-page {
     padding: 30px 14px;
@@ -905,6 +986,42 @@ body {
 
   .signup-page-subtitle {
     font-size: 0.98rem;
+=======
+.signup-split-right {
+  position: relative;
+  background-image: url("/signupPic.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.signup-split-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(2, 71, 49, 0.08) 100%
+  );
+}
+
+@media (max-width: 992px) {
+  .signup-split-page {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-split-right {
+    min-height: 320px;
+    order: -1;
+  }
+
+  .signup-split-left {
+    padding: 32px 20px 40px 20px;
+  }
+
+  .signup-split-title {
+    font-size: 2.2rem;
+>>>>>>> Stashed changes
   }
 }
 }
