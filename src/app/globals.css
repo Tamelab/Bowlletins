@@ -81,6 +81,15 @@ body {
   color: #2E8B57 !important;
 }
 
+.nav-link-custom .dropdown-toggle {
+  color: #024731 !important;
+  font-weight: 500;
+}
+
+.nav-link-custom:hover .dropdown-toggle {
+  color: #2E8B57 !important;
+}
+
 /* Login button */
 .btn-login {
   color: #024731 !important;
