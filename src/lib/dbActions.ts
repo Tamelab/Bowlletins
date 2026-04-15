@@ -95,3 +95,21 @@ export async function addStuff(data: {
 
   revalidatePath('/list');
 }
+
+export async function editStuff(data: {
+  id: number;
+  name: string;
+  quantity: number;
+  condition: 'excellent' | 'good' | 'fair' | 'poor';
+}) {
+  await prisma.stuff.update({
+    where: { id: data.id },
+    data: {
+      name: data.name,
+      quantity: Number(data.quantity),
+      condition: data.condition,
+    },
+  });
+
+  revalidatePath('/list');
+}
