@@ -30,7 +30,7 @@ body {
 
 /* Top thin green bar */
 .top-strip {
-  height: 28px;
+  height: 20px;
   background-color: #024731;
 }
 
@@ -43,6 +43,10 @@ body {
   z-index: 3000;
 }
 
+.nav-main.navbar {
+  padding: 0 16px;
+  height: 70px; /* lock it */
+}
 
 /* Desktop center nav */
 .nav-center {

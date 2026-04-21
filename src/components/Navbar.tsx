@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
 
           {/* LOGO LEFT */}
           <Navbar.Brand href="/">
-            <img src="/logo.png" width="140" alt="Bow-lletins" />
+            <img src="/logo.png" width="160" alt="Bow-lletins" />
           </Navbar.Brand>
 
           {/* MENU BUTTON (MOBILE) */}
