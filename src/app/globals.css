@@ -38,30 +38,131 @@ body {
 .nav-main {
   background-color: #F5F1E6;
   border-bottom: 1px solid #ddd;
-  height: 60px;
+  min-height: 42px;
+  position: relative;
+  z-index: 3000;
 }
 
-/* Left and right stay normal */
-.nav-left {
-  z-index: 2;
-}
-
-.nav-right {
-  margin-left: auto;
-  z-index: 2;
-}
-
-/* TRUE CENTER */
+/* Desktop center nav */
 .nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
   gap: 30px;
 }
 
-/* Green text */
-.text-uh-green {
+/* Desktop only: keep center links truly centered */
+@media (min-width: 768px) {
+  .nav-center.d-none.d-md-flex {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Right-side auth area */
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mobile dropdown panel */
+@media (max-width: 767.98px) {
+  .nav-main {
+    min-height: 30px;
+  }
+
+  .navbar-toggler {
+    padding: 2px 6px;
+    border-color: rgba(2, 71, 49, 0.25);
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 12px;
+    width: 220px;
+    background-color: #F5F1E6;
+    border: 1px solid #ddd6c8;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    z-index: 4000;
+  }
+
+  .nav-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin: 0;
+    padding-top: 0;
+    position: static;
+    transform: none;
+  }
+
+  .nav-auth {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd6c8;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .nav-link-custom {
+    width: 100%;
+    text-align: right;
+    padding: 4px 0;
+  }
+
+  .dropdown-menu {
+    background-color: #F5F1E6 !important;
+    border: 1px solid #ddd6c8 !important;
+    text-align: right;
+  }
+}
+ /* Dropdown toggle button */
+.menu-btn {
+  background: none;
+  border: none;
   color: #024731;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 4px 6px;
+}
+
+.menu-btn:hover {
+  color: #2E8B57;
+}
+
+.menu-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.menu-arrow.open {
+  transform: rotate(180deg);
 }
 
 /* Logo styling */
