@@ -67,7 +67,7 @@ const NavBar: React.FC = () => {
                 About
               </Nav.Link>
 
-              <Nav.Link href="#" className="nav-link-custom">
+              <Nav.Link href="/contact" className="nav-link-custom" active={pathName === '/contact'}>
                 Contact
               </Nav.Link>
             </Nav>
@@ -95,7 +95,7 @@ const NavBar: React.FC = () => {
                 About
               </Nav.Link>
 
-              <Nav.Link href="#" className="nav-link-custom">
+              <Nav.Link href="/contact" className="nav-link-custom">
                 Contact
               </Nav.Link>
 
