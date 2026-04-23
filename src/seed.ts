@@ -1,10 +1,8 @@
-import dotenv from 'dotenv';
 import { prisma } from './lib/prisma';
 import { Role, Major, FlyerCategory} from '@prisma/client';
 import { hash } from 'bcrypt';
 import * as config from '../config/settings.development.json';
 
-dotenv.config({ path: '.env.local' });
 async function main() {
   console.log('Seeding the database...');
   const password = await hash('changeme', 10);
@@ -34,10 +32,12 @@ async function main() {
   }
 
   // Seed flyers
-console.log(`Seeding ${config.defaultFlyers.length} flyers...`);
+  console.log(`Seeding ${config.defaultFlyers.length} flyers...`);
   for (const flyer of config.defaultFlyers) {
-    const category = FlyerCategory[flyer.category as keyof typeof FlyerCategory] ?? FlyerCategory.Other;
+    const category = flyer.category as FlyerCategory || FlyerCategory.Other;
+
     console.log(`  Creating flyer: ${flyer.title} with category: ${category}`);
+
     await prisma.flyer.create({
       data: {
         title: flyer.title,
@@ -47,9 +47,7 @@ console.log(`Seeding ${config.defaultFlyers.length} flyers...`);
         location: flyer.location,
         contactInfo: flyer.contactInfo,
         owner: flyer.owner,
-        savedBy: {
-          set: flyer.savedBy ?? [],
-        },
+        savedby: flyer.savedBy ?? [],
       },
     });
   }
