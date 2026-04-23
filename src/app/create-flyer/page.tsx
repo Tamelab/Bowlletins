@@ -63,7 +63,7 @@ const CreateFlyerPage = () => {
 
           <Form.Group className="mb-3">
             <Form.Label className="create-flyer-label">Date</Form.Label>
-            <Form.Control name="date" type="text" placeholder="e.g. April 25, 2026" className="create-flyer-input" />
+            <Form.Control name="date" type="date" className="create-flyer-input" />
             {errors.date && <Alert variant="danger" className="mt-1 py-1 px-2 small">{errors.date}</Alert>}
           </Form.Group>
 
