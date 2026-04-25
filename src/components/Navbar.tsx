@@ -55,12 +55,13 @@ const NavBar: React.FC = () => {
               </Nav.Link>
 
               <NavDropdown title="Categories" className="nav-link-custom">
-               <NavDropdown.Item href="/categories/Jobs">Jobs</NavDropdown.Item>
-              <NavDropdown.Item href="/categories/Internships">Internships</NavDropdown.Item>
-              <NavDropdown.Item href="/categories/Events">Events</NavDropdown.Item>
-              <NavDropdown.Item href="/categories/StudyGroups">Study Groups</NavDropdown.Item>
-              <NavDropdown.Item href="/categories/Social">Social</NavDropdown.Item>
-              <NavDropdown.Item href="/categories/Clubs">Clubs</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Jobs">Jobs</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Internships">Internships</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Volunteer">Volunteer</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Events">Events</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Academics">Academics</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Social">Social</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Clubs_Organizations">Clubs &amp; Organizations</NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link href="/about" className="nav-link-custom" active={pathName === '/about'}>
@@ -83,12 +84,13 @@ const NavBar: React.FC = () => {
               </Nav.Link>
 
               <NavDropdown title="Categories" className="nav-link-custom">
-                <NavDropdown.Item href="#">Jobs</NavDropdown.Item>
-                <NavDropdown.Item href="#">Internships</NavDropdown.Item>
-                <NavDropdown.Item href="#">Events</NavDropdown.Item>
-                <NavDropdown.Item href="#">Study Groups</NavDropdown.Item>
-                <NavDropdown.Item href="#">Social</NavDropdown.Item>
-                <NavDropdown.Item href="#">Clubs</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Jobs">Jobs</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Internships">Internships</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Volunteer">Volunteer</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Events">Events</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Academics">Academics</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Social">Social</NavDropdown.Item>
+                <NavDropdown.Item href="/categories/Clubs_Organizations">Clubs &amp; Organizations</NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link href="/about" className="nav-link-custom">

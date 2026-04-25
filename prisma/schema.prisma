@@ -51,15 +51,6 @@ enum Major {
   Other
 }
 
-enum Category {
-  Jobs
-  Internships
-  Events
-  StudyGroups
-  Social
-  Clubs
-}
-
 enum Condition {
   excellent
   good

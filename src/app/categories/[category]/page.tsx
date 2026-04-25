@@ -1,10 +1,10 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
-import { Category, FlyerCategory } from '@prisma/client';
+import { FlyerCategory } from '@prisma/client';
 import FlyerCard from '@/components/FlyerCard';
 
-const validCategories = ['Jobs', 'Internships', 'Events', 'StudyGroups', 'Social', 'Clubs'];
+const validCategories = ['Jobs', 'Internships', 'Volunteer', 'Events', 'Academics', 'Social', 'Clubs_Organizations'];
 
 const CategoryPage = async ({ params }: { params: Promise<{ category: string }> }) => {
   const { category } = await params;
@@ -20,10 +20,10 @@ const CategoryPage = async ({ params }: { params: Promise<{ category: string }> 
       <Container className="py-5">
         <div className="category-header">
           <h1 className="category-title">
-            {category === 'StudyGroups' ? 'Study Groups' : category}
+            {category === 'Clubs_Organizations' ? 'Clubs & Organizations' : category}
           </h1>
           <p className="category-subtitle">
-             {flyers.length} {flyers.length === 1 ? 'flyer' : 'flyers'} posted
+            {flyers.length} {flyers.length === 1 ? 'flyer' : 'flyers'} posted
           </p>
         </div>
         {flyers.length === 0 ? (
