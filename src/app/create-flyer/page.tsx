@@ -1,12 +1,26 @@
 'use client';
 
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { createFlyer } from './actions';
 import { CreateFlyerSchema } from '@/lib/validationSchemas';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 const CreateFlyerPage = () => {
-  const [errors, setErrors] = useState<Record<string, string>>({}); 
+  const { status } = useSession();
+  const router = useRouter();
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  if (status === 'loading') {
+    return <LoadingSpinner />;
+  }
+
+  if (status === 'unauthenticated') {
+    router.push('/auth/signin');
+    return null;
+  }
 
   const handleSubmit = async (formData: FormData) => {
     await CreateFlyerSchema.validate({
